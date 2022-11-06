@@ -15,21 +15,20 @@ let starting_time = Date.now();
 const textbox = document.getElementById('textbox');
 const quote = document.getElementById('quote');
 const message = document.getElementById('message');
-const start = document.getElementById('start-button')
 
-start.addEventListener('click', () => {
+document.getElementById('start-button').addEventListener('click', () => {
     const quote_index = Math.floor(Math.random() * all_quotes.length);
-    current_words = all_quotes[quote_index].split(" ");
+    current_words = all_quotes[quote_index].split(' ');
     current_index = 0;
     
     const span_words = current_words.map((word) => {
         return `<span>${word} </span>`
     });
-    quote.innerHTML = span_words.join("");
-    quote.childNodes[0].className = "highlight";
-    message.textContent = "";
+    quote.innerHTML = span_words.join('');
+    quote.childNodes[0].className = 'highlight';
+    message.textContent = '';
 
-    textbox.value = "";
+    textbox.value = '';
     textbox.focus();
 
     starting_time = new Date().getTime();
@@ -45,7 +44,7 @@ textbox.addEventListener("input", () => {
         message.innerText = message_text;
     }
     else if (typed_value.endsWith(" ") && typed_value.trim() == word) {
-        textbox.value = "";
+        textbox.value = '';
         current_index++;
         for (const word_element of quote.childNodes) {
             word_element.className = '';
@@ -56,6 +55,6 @@ textbox.addEventListener("input", () => {
         textbox.className = '';
     }
     else {
-        textbox.className = "error";
+        textbox.className = 'error';
     }
 });
