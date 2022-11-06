@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.highlight {
+    background-color: yellowgreen;
+}
+
+.error {
+    background-color: crimson;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    text-align: center;
+    background-color: antiquewhite;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color:darkslategray;
+    color:coral;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    padding: 20px;
+}
+
+p {
+    font-size: 25px;
+}
+
+#quote {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#message {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#textbox {
+    font-size: 25px;
+    width: 400px;
+}
+
+#start-button {
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
